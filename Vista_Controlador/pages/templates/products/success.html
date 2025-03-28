@@ -1,0 +1,25 @@
+{% extends 'pages/base.html' %} 
+{% block title %}Producto Creado - Online Store{% endblock %} 
+{% block header_title %}Éxito{% endblock %} 
+
+{% block content %} 
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header bg-success text-white">
+          <h4>Producto Creado Exitosamente</h4>
+        </div>
+        <div class="card-body">
+          <p class="alert alert-success">¡El producto "{{ product_name }}" con precio ${{ product_price }} ha sido creado correctamente!</p>
+          
+          <div class="mt-4">
+            <a href="{% url 'index' %}" class="btn btn-primary">Ver todos los productos</a>
+            <a href="{% url 'form' %}" class="btn btn-outline-primary">Crear otro producto</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
